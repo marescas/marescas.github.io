@@ -90,7 +90,7 @@ Los resultados son esperanzadores. Una vez realizada la exploración exhaustiva 
 # Conclusiones
 Se ha desarrollado un sistema capaz de predecir el sentimiento del usuario al manifestar su opinión en Twitter. Para ello se ha utilizado un dataset con 14640 tweets sobre la opinión de los viajeros en Febrero de 2015. Además,la información textual ha sido procesada y representada utilizando técnicas de procesamiento de lenguaje natural para posteriormente realizar una tarea de aprendizaje.
 
-Además de la aproximación propuesta se podría intentar realizar otras aproximaciones basadas por ejemplo en el uso de word embeddings como Word2Vec, de esta forma se podría capturar relaciones semánticas entre distintos términos y obtener una representación basada en las hipótesis de la semántica distribucional.
+Además de la aproximación propuesta se podría intentar realizar otras aproximaciones basadas por ejemplo en el uso de word embeddings como Word2Vec, de esta forma se podría capturar relaciones semánticas entre distintos términos y obtener una representación basada en las hipótesis de la semántica distribucional. Probablemente lo deje para una segunda versión...
 
 El código completo está disponible en [GitHub](https://github.com/marescas/marescas.github.io/blob/master/SentimentalPython.ipynb)
 
