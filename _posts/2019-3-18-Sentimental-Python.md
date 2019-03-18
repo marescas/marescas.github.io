@@ -31,7 +31,7 @@ Para cada tweet se disponen de los siguientes datos:
 En nuestro caso nos centraremos en los campos airline_sentiment y text.
 
 # Preproceso
-Se ha decidido elaborar un preproceso del texto convirtiendo cada tweet a minúsculas ademas de sustituir las urls por la etiqueta <url> y las menciones por la etiqueta <mention>. Para ello se ha utilizado el siguiente script:
+Se ha decidido elaborar un preproceso del texto convirtiendo cada tweet a minúsculas además de sustituir las urls por la etiqueta url y las menciones por la etiqueta mention. Para ello se ha utilizado el siguiente script:
 {% highlight python %}
 url_re = re.compile("https?://[^\s]+")
 mention_re = re.compile("@(\w+)")
@@ -56,7 +56,7 @@ def representationBOW(corpus):
     return bow,vectorizerTrain
 {% endhighlight %}
 # Experimentación
-Se ha optado por utilizar dos algoritmos: Support Vector Machines y Logistic Regression. Además, se ha utilizado exploración exhaustiva con el fin de obtener los mejores parametros para cada algoritmo
+Se ha optado por utilizar dos algoritmos: Support Vector Machines y Logistic Regression. Además, se ha utilizado exploración exhaustiva con el fin de obtener los mejores parámetros para cada algoritmo
 ## Support Vector Machines
 Para las máquinas de vectores soporte se ha explorado distintas combinaciones de kernel y C con el fin de determinar cual produce mejores predicciones. El código utilizado es el siguiente:
 {% highlight python %}
@@ -83,7 +83,7 @@ for c in cs:
 
 # Resultados
 Los resultados son esperanzadores. Una vez realizada la exploración exhaustiva los mejores resultados obtenidos son los siguientes:
-* Máquinas de vectores soporte con kernel linear y C = 1 consigue una precisión: 81.5%.
+* Máquinas de vectores soporte con kernel linear y C = 1 consigue una precisión del 81.5%.
 * Regresión Logística con C = 1 consigue una precision del 81.3%
 # Conclusiones
 Se ha desarrollado un sistema capaz de predecir el sentimiento del usuario al manifestar su opinión en Twitter. Para ello se ha utilizado un dataset con 14640 tweets sobre la opinión de los viajeros en Febrero de 2015. Además,la información textual ha sido procesada y representada utilizando técnicas de procesamiento de lenguaje natural para posteriormente realizar una tarea de aprendizaje.
