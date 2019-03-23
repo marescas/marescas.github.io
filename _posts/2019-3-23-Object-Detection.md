@@ -97,3 +97,19 @@ Windsor_tie 0.024184078
 sunglasses 0.017918428
 
 ¡Aleluya! Detecta el maserati como un deportivo y la Ninfa como un tipo de ave. Algo curioso pasa con Turing, detecta la corbata pero no una persona.  
+
+Código completo:
+{% highlight python %}
+from keras.applications.vgg16 import VGG16
+from keras.preprocessing.image import load_img
+from keras.preprocessing.image import img_to_array
+from keras.applications.vgg16 import decode_predictions
+modelo = VGG16()
+imagen = load_img('test2.jpeg', target_size=(224, 224))
+imagen = img_to_array(imagen)
+imagen = imagen.reshape((1, imagen.shape[0], imagen.shape[1], imagen.shape[2])) #224*224*3 (RGB)
+predicciones = modelo.predict(imagen)
+etiquetas = decode_predictions(predicciones)
+for l in etiquetas[0]:
+    print(l[1], l[2])
+{% endhighlight %}
