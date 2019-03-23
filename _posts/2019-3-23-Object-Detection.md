@@ -70,6 +70,7 @@ for l in etiquetas[0]:
 Se ha probado el algoritmo con varias imágenes y los resultados son acertados
 
 ![Maserati](/images/maserati.jpg)
+
 **Resultados:**
 sports_car 0.4424708
 convertible 0.40847698
@@ -78,6 +79,7 @@ car_wheel 0.024519864
 racer 0.023201792
 
 ![Ninfa](/images/bird.jpg)
+
 **Resultados**
 ptarmigan 0.5499425
 peacock 0.23322123
@@ -86,6 +88,7 @@ sulphur-crested_cockatoo 0.06153025
 hen 0.014728737
 
 ![Alan Turing](/images/turing.jpg)
+
 **Resultados**
 bow_tie 0.728437
 military_uniform 0.08980917
