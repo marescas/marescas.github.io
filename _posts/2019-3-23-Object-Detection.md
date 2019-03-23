@@ -12,7 +12,7 @@ En este post trataremos de construir un detector de objetos capaz de detectar ha
 VGG es un modelo de Deep Learning presentado por Karen Simonyan y Andrew Zisserman en el artículo [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf). Se trata de un modelo basado en redes convolucionales de 16 o 19 capas.
 
 El modelo recibe como input una matriz de 224 x 224 x 3 a la que se le aplican un conjunto de capas ocultas que dan como resultado un vector de mil componentes con la probabilidad de que cada objeto este en la imagen. La arquitectura de la red se puede apreciar en la siguiente imagen:
-![Arquitectura de la red](images/vgg16.png)
+![Arquitectura de la red](/images/vgg16.png)
 
 El modelo presentado por Karen y Andrew fue entrenado durante 2 semanas sobre Image-Net. Una iniciativa para proporcionar a investigadores de todo el mundo una  base de datos de imágenes de fácil acceso. Actualmente cuenta con más de 14 millones de imágenes y más de 1 millón de imágenes anotadas.
 
@@ -69,7 +69,7 @@ for l in etiquetas[0]:
 # Resultados
 Se ha probado el algoritmo con varias imágenes y los resultados son acertados
 
-![Maserati](images/maserati.jpg)
+![Maserati](/images/maserati.jpg)
 **Resultados:**
 sports_car 0.4424708
 convertible 0.40847698
@@ -77,7 +77,7 @@ beach_wagon 0.039662655
 car_wheel 0.024519864
 racer 0.023201792
 
-![Ninfa](images/bird.jpg)
+![Ninfa](/images/bird.jpg)
 **Resultados**
 ptarmigan 0.5499425
 peacock 0.23322123
@@ -85,7 +85,7 @@ jay 0.0885262
 sulphur-crested_cockatoo 0.06153025
 hen 0.014728737
 
-![Alan Turing](images/turing.jpg)
+![Alan Turing](/images/turing.jpg)
 **Resultados**
 bow_tie 0.728437
 military_uniform 0.08980917
