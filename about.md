@@ -4,10 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Computer Science student. Using machine learning techniques to predict gender on Twitter as final work of the degree.
-
+Computer engineer from the UPV. Now studying a master's degree in artificial intelligence at the same university
 ### More Information
-Building
+Interests
+⋅⋅* Natural Language Processing (NLP)
+⋅⋅* Author Profiling
+⋅⋅* Natural-language understanding (NLU)
+⋅⋅* Question Answering
+⋅⋅* ChatBots
 
 ### Contact me
 
