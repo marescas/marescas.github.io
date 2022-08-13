@@ -1,18 +1,117 @@
----
-layout: default
----
-
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marcos Esteve</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
+    <a id="contact" onclick="document.location =  'mailto:marescasinf@gmail.com'" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1>Marcos Esteve Casademunt</h1>
+        <h2>Data Scientist / Machine Learning Engineer</h2>
+        <div id="menu">
+            <a onclick="showabout()">About</a>
+            <a onclick="showwork()">Work</a>
+            <a onclick="document.location =  'mailto:marescasinf@gmail.com'">Contact</a>
+        </div>
+        <table>
+                <tr>
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://www.linkedin.com/in/marescas/"><i class="fab fa-linkedin" ></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://twitter.com/mecprojects"><i class="fab fa-twitter"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://medium.com/@marescas"><i class="fab fa-medium"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="https://www.google.com/maps/d/u/0/edit?mid=1m4lIDtll-MMXelObB2D0ZvpVLDNkJs22&usp=sharing"><i class="fab fa-dribbble"></i></a></td>
+                </tr>
+        </table>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>Work</h1>
+        <section>
+            <h2>Machine Learning Engineer @ RavenPack</h2>
+            <p>
+                Jun 2021 - Now
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;Deep Learning (Tensorflow, Keras, PyTorch)</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Machine Learning (Scikit-Learn)</div>
+                <div><i class="fas fa-circle"></i>&nbsp;NLP (Spacy, NLTK, Gensim)</div>
+            </div>
+        </section>
+        <section>
+            <h2>Machine Learning Engineer @ SolverIA</h2>
+            <p>
+                Sept 2020 - Jun 2021
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;Deep Learning (Tensorflow, Keras)</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Machine Learning (Scikit-Learn)</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Time series</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Docker</div>
+                <div><i class="fas fa-circle"></i>&nbsp;FastAPI</div>
+            </div>
+        </section>
+        <section>
+            <h2>Data Scientist @ Datamaran</h2>
+            <p>
+                Sept 2019 - Sept 2020
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;Machine Learning (Scikit-Learn)</div>
+                <div><i class="fas fa-circle"></i>&nbsp;NLP (Spacy, NLTK, Gensim)</div>
+                <div><i class="fas fa-circle"></i>&nbsp;MongoDB</div>
+            </div>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+            <h1>About</h1>
+            <section>
+                <h2>Hi 👋🏻</h2>
+                <p>
+                    I'm Marcos, I am a graduate in Computer Science and Master's Degree in Artificial Intelligence, Pattern Recognition and Digital Image from the Polytechnic University of Valencia.
+                </p>
+                <p>
+                    Data Scientist with + 3 years of experience in the development and implementation of predictive models based on Machine Learning and Deep Learning for a wide variety of tasks, as well as the development of APIs and the deployment of the models in different infrastructures. Now I am focus on the search and relevance problem.
+                </p>
+            </section>
+            <section>
+                <h2>Currently my interests are:</h2>
+                <p>
+                   <ul>
+                    <li>Natural Language Processing</li>
+                    <li>Deep Learning</li>
+                    <li>Search and relevance</li>
+                    <li>Graph Neural Networks</li>
+                   </ul> 
+                </p>
+            </section>
+        </div>
+        <div id="footer">
+            Author of the template <br><br> <a href="https://imfunniee.github.io">imfunniee</a>
+        </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
